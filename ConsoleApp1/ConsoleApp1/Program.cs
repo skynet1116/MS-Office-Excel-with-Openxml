@@ -29,11 +29,6 @@ namespace ConsoleApp1
                         text = reader.GetText();
                         Console.WriteLine(reader.ElementType + "\t" + text);
                     }
-                    else if (reader.ElementType == typeof(SharedStringTablePart.share))
-                    {
-                        text = reader.GetText();
-                        Console.WriteLine(reader.ElementType + "\t" + text);
-                    }
                 }
             }
         }
