@@ -1,4 +1,6 @@
-﻿
+﻿// 上海西口印刷有限公司 纸说信息部门 余峻峣 2017.8.20
+// 固定资产明细格式变更
+// 编辑环境VS2017 .Net框架 C#语言
 using ClosedXML.Excel;
 using System;
 
@@ -37,7 +39,6 @@ namespace ClosedXML_Examples
                         //Console.WriteLine(row.Cell(1).Value.ToString());
                         continue;
                     }
-                    //r += 6;  //表格之间相隔6行
                     ws.Cell(r, c).Value = excelTable; //插入复制的表格模板
 
                     //保存更改
@@ -46,9 +47,7 @@ namespace ClosedXML_Examples
                     //遍历所有的Cells
 
                     foreach (var cell in row.Cells())
-
-                    {
-                        
+                    {                   
                         string tempst = cell.Value.ToString();
                         if (tempst == "")
                         {
@@ -61,10 +60,7 @@ namespace ClosedXML_Examples
                     r += 1;//每个表之间空一行
                 }
                 wb.SaveAs(savepath);//保存结果
-
             }
         }
-
-
     }
 }
